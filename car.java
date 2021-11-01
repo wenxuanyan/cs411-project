@@ -17,7 +17,7 @@ public class car{
 	public String getCustomerid() {
 		return customerid;
 	}
-	public final void setcustomerid(String customerid) throws IllegalArgumentException{
+	public final void setCustomerid(String customerid) throws IllegalArgumentException{
 		if(customerid==null || customerid.length() == 0)
 			throw new IllegalArgumentException("Customerid can not be NULL or length equals 0");
 		this.customerid = customerid;
@@ -27,10 +27,10 @@ public class car{
 	 * this is get carid
 	 * @return carid
 	 */
-	public String getcarid() {
+	public String getCarid() {
 		return carid;
 	}
-	public final void setcarid(String carid) throws IllegalArgumentException{
+	public final void setCarid(String carid) throws IllegalArgumentException{
 		if(carid==null || carid.length() == 0)
 			throw new IllegalArgumentException("Carid can not be NULL or length equals 0");
 		this.carid = carid;
@@ -40,10 +40,10 @@ public class car{
 	 * this is get carname
 	 * @return carname
 	 */
-	public String getcarname() {
+	public String getCarname() {
 		return carname;
 	}
-	public final void setcarname(String carname) throws IllegalArgumentException{
+	public final void setCarname(String carname) throws IllegalArgumentException{
 		if(carname==null || carname.length() == 0)
 			throw new IllegalArgumentException("Carname can not be NULL or length equals 0");
 		this.carname = carname;
@@ -53,10 +53,10 @@ public class car{
 	 * this is get car type
 	 * @return type
 	 */
-	public String gettype() {
+	public String getType() {
 		return type;
 	}
-	public final void settype(String type) throws IllegalArgumentException{
+	public final void setType(String type) throws IllegalArgumentException{
 		if(type==null || type.length() == 0)
 			throw new IllegalArgumentException("Type can not be NULL or length equals 0");
 		this.type = type;
@@ -66,10 +66,10 @@ public class car{
 	 * this is get car color
 	 * @return color
 	 */
-	public String getcolor() {
+	public String getColor() {
 		return color;
 	}
-	public final void setcolor(String color) throws IllegalArgumentException {
+	public final void setColor(String color) throws IllegalArgumentException {
 		if(color==null || color.length() == 0)
 			throw new IllegalArgumentException("Color can not be NULL or length equals 0");
 		this.color = color;
@@ -79,10 +79,10 @@ public class car{
 	 * this is get car level
 	 * @return level
 	 */
-	public String getlevel() {
+	public String getLevel() {
 		return level;
 	}
-	public final void setlevel(String level) throws IllegalArgumentException {
+	public final void setLevel(String level) throws IllegalArgumentException {
 		if(level==null || level.length() == 0)
 			throw new IllegalArgumentException("Level can not be NULL or length equals 0");
 		this.level = level;
@@ -92,10 +92,10 @@ public class car{
 	 * this is get car insurance
 	 * @return insurance
 	 */
-	public String getinsurance() {
+	public String getInsurance() {
 		return insurance;
 	}
-	public final void setinsurance(String insurance) throws IllegalArgumentException {
+	public final void setInsurance(String insurance) throws IllegalArgumentException {
 		if(insurance==null || insurance.length() == 0)
 			throw new IllegalArgumentException("Insurance can not be NULL or length equals 0");
 		this.insurance = insurance;
@@ -105,10 +105,10 @@ public class car{
 	 * this is get car price
 	 * @return price
 	 */
-	public String getprice() {
+	public String getPrice() {
 		return price;
 	}
-	public final void setprice(String price) throws IllegalArgumentException{
+	public final void setPrice(String price) throws IllegalArgumentException{
 		if(price==null || price.length() == 0)
 			throw new IllegalArgumentException("Price can not be NULL or length equals 0");
 		this.price = price;
@@ -118,10 +118,10 @@ public class car{
 	 * this is get car condition
 	 *@return condition
 	 */
-	public String getcondition() {
+	public String getCondition() {
 		return condition
 	}
-	public final void setcondition(String condition) throws IllegalArgumentException{
+	public final void setCondition(String condition) throws IllegalArgumentException{
 		if(condition==null || condition.length() == 0)
 			throw new IllegalArgumentException("Condition can not be NULL or length equals 0");
 		this.condition = condition;
@@ -130,8 +130,13 @@ public class car{
 	 *this is get car status
 	 *@return status
 	 */
-	public String getstatus(){
+	public String getStatus(){
 		return status
+	}
+	public final void setStatus(String status) throws IllegalArgumentException{
+		if(status==null || status.length() == 0)
+			throw new IllegalArgumentException("Status can not be NULL or length equals 0");
+		this.status = status;
 			
 
 	/**
