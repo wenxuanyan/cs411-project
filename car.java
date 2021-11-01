@@ -1,5 +1,5 @@
 public class car{
-	private String customerid;
+	private String customerid = null;
 	private String carid;
 	private String carname;
 	private String type;
@@ -14,7 +14,7 @@ public class car{
 	 * this is get customer id
 	 * @return customerid
 	 */
-	public String getcustomerid() {
+	public String getCustomerid() {
 		return customerid;
 	}
 	public final void setcustomerid(String customerid) throws IllegalArgumentException{
