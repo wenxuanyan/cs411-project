@@ -7,6 +7,8 @@ public class car{
 	private String level;
 	private String insurance;
 	private String price;
+	private String status;
+	private String condition;
 	
 	/**
 	 * this is get customer id
@@ -111,6 +113,26 @@ public class car{
 			throw new IllegalArgumentException("Price can not be NULL or length equals 0");
 		this.price = price;
 	}
+	
+	/**
+	 * this is get car condition
+	 *@return condition
+	 */
+	public String getcondition() {
+		return condition
+	}
+	public final void setcondition(String condition) throws IllegalArgumentException{
+		if(condition==null || condition.length() == 0)
+			throw new IllegalArgumentException("Condition can not be NULL or length equals 0");
+		this.condition = condition;
+	
+	/**
+	 *this is get car status
+	 *@return status
+	 */
+	public String getstatus(){
+		return status
+			
 
 	/**
 	 * the constructor for add a new car
