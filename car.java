@@ -1,5 +1,5 @@
 public class car{
-	private String id;
+	private String customerid;
 	private String carid;
 	private String carname;
 	private String type;
@@ -9,16 +9,16 @@ public class car{
 	private String price;
 	
 	/**
-	 * this is get id
-	 * @return id
+	 * this is get customer id
+	 * @return customerid
 	 */
-	public String getid() {
-		return id;
+	public String getcustomerid() {
+		return customerid;
 	}
-	public final void setid(String id) throws IllegalArgumentException{
-		if(id==null || id.length() == 0)
-			throw new IllegalArgumentException("Id can not be NULL or length equals 0");
-		this.id = id;
+	public final void setcustomerid(String customerid) throws IllegalArgumentException{
+		if(customerid==null || customerid.length() == 0)
+			throw new IllegalArgumentException("Customerid can not be NULL or length equals 0");
+		this.customerid = customerid;
 	}
 	
 	/**
@@ -114,7 +114,7 @@ public class car{
 
 	/**
 	 * the constructor for add a new car
-	 * @param id
+	 * @param customerid
 	 * @param carid
 	 * @param carname
 	 * @param type
@@ -123,8 +123,8 @@ public class car{
 	 * @param insurance
 	 * @param price
 	 */
-	public car(String id, String carid, String carname, String type, String level, String color, String insurance, String price) {
-		setid(id);
+	public car(String customerid, String carid, String carname, String type, String level, String color, String insurance, String price) {
+		setcustomerid(customerid);
 		setcarid(carid);
 		setcarname(carname);
 		settype(type);
