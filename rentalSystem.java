@@ -3,16 +3,31 @@ public class rentalSystem {
 	private customer[] customerList;
 	private car[] carList;
 	
+	/**
+	 * Constructor, takes no input and creats a carList abd a customerList
+	 */
 	rentalSystem(){
 		customerList = new customer[10];
 		carList = new car[10];
 	}
+	/**
+	 * 
+	 * @return customerList
+	 */
 	public customer[] getCustomerList() {
 		return customerList;
 	}
+	/**
+	 * 
+	 * @return carList
+	 */
 	public car[] getCarList() {
 		return carList;
 	}
+	/**
+	 * add customer into current system
+	 * @param customer
+	 */
 	public void addCustomer(customer customer) {
 		if(!isFull(customerList)) {
 			customer[] tempList = new customer[customerList.length+10];
@@ -27,6 +42,10 @@ public class rentalSystem {
 			}
 		}
 	}
+	/**
+	 * add a new car into car list
+	 * @param car
+	 */
 	public void addCar(car car) {
 		if(!isFull(carList)) {
 			car[] tempList = new car[carList.length+10];
@@ -41,6 +60,11 @@ public class rentalSystem {
 			}
 		}
 	}
+	/**
+	 * check if the list is full
+	 * @param any(a car list)
+	 * @return boolean
+	 */
 	public boolean isFull(car[] any) {
 		for(car s:any) {
 			if(s==null) {
@@ -49,6 +73,11 @@ public class rentalSystem {
 		}
 		return true;
 	}
+	/**
+	 * check if the list is full
+	 * @param any(a customer list)
+	 * @return boolean
+	 */
 	public boolean isFull(customer[] any) {
 		for(customer s:any) {
 			if(s==null) {
@@ -57,6 +86,11 @@ public class rentalSystem {
 		}
 		return true;
 	}
+	/**
+	 * check if the content is in the list(any lists)
+	 * @param content
+	 * @return boolean
+	 */
 	public boolean isInTheList(String content) {
 		for(customer c:customerList) {
 			if(c!=null) {
@@ -74,6 +108,11 @@ public class rentalSystem {
 		
 		return false;
 	}
+	/**
+	 * delete the car from car list by name or id
+	 * @param content
+	 * @return boolean
+	 */
 	public boolean delCar(String content) {
 		for(car c:carList) {
 			if(c!=null) {
@@ -89,6 +128,11 @@ public class rentalSystem {
 		}
 		return false;
 	}
+	/**
+	 * delete the customer from customer list
+	 * @param content
+	 * @return boolean
+	 */
 	public boolean delCustomer(String content) {
 		for(customer c:customerList) {
 			if(c!=null) {
