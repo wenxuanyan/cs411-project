@@ -252,7 +252,7 @@ public class rentalSystem {
 					}
 					System.out.print(rentalBook[i][j]);
 				}
-				System.out.print("Empty_Slot ");
+				else System.out.print(" Empty_Slot ");
 			}
 			System.out.println();
 		}
