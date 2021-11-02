@@ -26,3 +26,8 @@ link for VSCode: https://code.visualstudio.com/
 
 
 # Credit
+Haowei Li 
+Yichen Wang
+Simo Wu
+Wenxuan Yan
+Runze Zhang
