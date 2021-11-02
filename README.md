@@ -8,4 +8,5 @@ Our code has three classes
 2. Customer.java
 3. rentalSystem.java
 
-#
+# Set Up
+# 1. Requirement and Installation 
