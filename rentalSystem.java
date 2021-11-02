@@ -43,9 +43,10 @@ public class rentalSystem {
 			}
 			customerList = tempList;
 		}
-		for(customer c:customerList) {
-			if(c==null) {
-				c = customer;
+		for(int i = 0;i<customerList.length; i++) {
+			if(customerList[i]==null) {
+				customerList[i] = customer;
+				break;
 			}
 		}
 	}
@@ -65,9 +66,10 @@ public class rentalSystem {
 			}
 			carList = tempList;
 		}
-		for(car c:carList) {
-			if(c==null) {
-				c = car;
+		for(int i = 0;i<carList.length; i++) {
+			if(carList[i]==null) {
+				carList[i] = car;
+				break;
 			}
 		}
 	}
@@ -183,6 +185,23 @@ public class rentalSystem {
 		}
 		return false;
 	}
+	public String getCustomerNameByInfo(String content) throws IllegalArgumentException{
+		if(content==null) throw new IllegalArgumentException("input cannot be null");
+		for(int i=0;i<customerList.length;i++) {
+			if(customerList[i]!=null) {
+				if(customerList[i].getName()==content) {
+					return customerList[i].getName();
+				}
+				if(customerList[i].getId()==content) {
+					return customerList[i].getName();
+				}
+				if(customerList[i].getPhoneNumber()==content) {
+					return customerList[i].getName();
+				}
+			}
+		}
+		return "No Such a Person";
+	}
 	/**
 	 * Input customer ID and the car name or the car ID to rent the car
 	 * If the car is rented, it will output rented
@@ -194,15 +213,16 @@ public class rentalSystem {
 		if(customerID==null||content==null||customerID.length()==0||content.length()==0) {
 			throw new IllegalArgumentException("rentACar input cannot be null or have a length of 0");
 		}
-		for(car c: carList) {
-			if(c==null) {
+		for(int i =0;i< carList.length;i++) {
+			if(carList[i]==null) {
 				System.out.println(content + " is not in the car list");
 				break;
 				}
-			if(c.getCarId()==content||c.getCarName()==content) {
-				if(c.getCustomerId()==null) {
-					c.setCustomerId(customerID);
+			if(carList[i].getCarId()==content||carList[i].getCarName()==content) {
+				if(carList[i].getCustomerId()==null) {
+					carList[i].setCustomerId(customerID);
 					System.out.println(content + " is successfully rented");
+					addRentalBook(getCustomerNameByInfo(customerID), customerID, carList[i].getCarName(), carList[i].getCarId());
 				}else {
 					System.out.println(content + " is already rented by someone");
 				}
@@ -212,7 +232,30 @@ public class rentalSystem {
 		
 	}
 	public void printRentalBook() {
-		System.out.println(Arrays.toString(rentalBook));
+		for(int i=0;i<rentalBook.length;i++) {
+			System.out.print(i + ": ");
+			for (int j=0;j<rentalBook[i].length;j++) {
+				if(rentalBook[i][j]!=null) {
+					switch(j) {
+						case 0:
+							System.out.print("Customer Name: ");
+							break;
+						case 1:
+							System.out.print(", Customer ID: ");
+							break;
+						case 2:
+							System.out.print(", Car Name: ");
+							break;
+						case 3:
+							System.out.print(", Car ID: ");
+							break;
+					}
+					System.out.print(rentalBook[i][j]);
+				}
+				System.out.print("Empty_Slot ");
+			}
+			System.out.println();
+		}
 	}
 	/**
 	 * add information of rental into record to keep track of all rentals
@@ -227,10 +270,10 @@ public class rentalSystem {
 		}
 		for(int i=0;i<rentalBook.length;i++) {
 			if(rentalBook[i][0] == null || rentalBook[i][0].length()==0) {
-				rentalBook[i][1] = customerName;
-				rentalBook[i][2] = customerId;
-				rentalBook[i][3] = carName;
-				rentalBook[i][4] = carId;
+				rentalBook[i][0] = customerName;
+				rentalBook[i][1] = customerId;
+				rentalBook[i][2] = carName;
+				rentalBook[i][3] = carId;
 				break;
 			}
 			if(i==rentalBook.length-1) {
@@ -261,5 +304,24 @@ public class rentalSystem {
 		}
 		return false;
 	}
-
+	/**
+	 * Print car list
+	 */
+	public void printCarList() {
+		System.out.print("This is car list: ");
+		for(int i=0;i<carList.length;i++) {
+			if(carList[i]!=null)System.out.print(carList[i].getCarName() + " ");
+		}
+		System.out.println();
+	}
+	/**
+	 * Print customer list
+	 */
+	public void printCustomerList() {
+		System.out.print("This is customer list: ");
+		for(int i=0;i<customerList.length;i++) {
+			if(customerList[i]!=null)System.out.print(customerList[i].getName() + " ");
+		}
+		System.out.println();
+	}
 }
