@@ -166,7 +166,7 @@ public class car{
 	 * test code
 	 */
 	public void main() {
-        car car1 = new car("01","001","Mercedes","S550","Luxury","Black","Liberty","$1000");
+        car car1 = new car("001","Mercedes","S550","Luxury","Black","Liberty","$1000");
 		System.out.println(car1.getCarId());
     }
 
