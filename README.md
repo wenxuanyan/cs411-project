@@ -9,4 +9,10 @@ Our code has three classes
 3. rentalSystem.java
 
 # Set Up
-# 1. Requirement and Installation 
+# 1. Requirement and Installation
+Our code requires customer computer has a software which can operate java file. In order to have best performance of our software, we recommend to have a computer at least operate Windows 7 or later version. The recommended sotware to implement our code are Eclipse or VScode. 
+link for Eclipse: https://www.eclipse.org/downloads/
+link for VSCode: https://code.visualstudio.com/
+
+# 2. Run the code
+
