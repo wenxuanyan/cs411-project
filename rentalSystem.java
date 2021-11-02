@@ -203,6 +203,21 @@ public class rentalSystem {
 		return "No Such a Person";
 	}
 	/**
+	 * To verify if there is such a customer with the ID
+	 * @param ID
+	 * @return
+	 */
+	public boolean verifyCustomerById(String ID) {
+		for(customer c:customerList) {
+			if(c!=null) {
+				if(c.getId()==ID) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	/**
 	 * Input customer ID and the car name or the car ID to rent the car
 	 * If the car is rented, it will output rented
 	 * @param customerID
@@ -212,6 +227,10 @@ public class rentalSystem {
 	public void rentACar(String customerID, String content) throws IllegalArgumentException{
 		if(customerID==null||content==null||customerID.length()==0||content.length()==0) {
 			throw new IllegalArgumentException("rentACar input cannot be null or have a length of 0");
+		}
+		if(!verifyCustomerById(customerID)) {
+			System.out.println(customerID + " is an invalid ID");
+			return;
 		}
 		for(int i =0;i< carList.length;i++) {
 			if(carList[i]==null) {
@@ -324,4 +343,32 @@ public class rentalSystem {
 		}
 		System.out.println();
 	}
+	/**
+	 * input both customer and car information to return the car
+	 * @param customerInfo
+	 * @param carInfo
+	 * @throws IllegalArgumentException
+	 */
+	public void returnCar(String customerInfo, String carInfo) throws IllegalArgumentException{
+		if(customerInfo==null||carInfo==null) throw new IllegalArgumentException("input cannot be null");
+		for(int i=0;i<rentalBook.length;i++) {
+			if(rentalBook[i][0] != null || rentalBook[i][0].length() !=0) {
+				if((customerInfo==rentalBook[i][0]||customerInfo==rentalBook[i][1])&&(carInfo==rentalBook[i][2]||carInfo==rentalBook[i][3])) {
+					for(int j =0;j< carList.length;j++) {
+						if(carList[j]!=null) {
+							if(carList[j].getCarName()==carInfo||carList[j].getCarId()==carInfo) {
+								carList[j].setCustomerId(null);
+								break;
+							}
+						}
+					}
+				}
+					rentalBook[i] = new String[4];
+					System.out.println(customerInfo + " successfully returned " + carInfo);
+					return;
+			}
+		}
+		System.out.println("Return Fail, customer info or car info error, please double check.");
+	}
 }
+
