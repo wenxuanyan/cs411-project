@@ -168,6 +168,12 @@ public class car{
 	public void main() {
         car car1 = new car("001","Mercedes","S550","Luxury","Black","Liberty","$1000");
 		System.out.println(car1.getCarId());
+		System.out.println(car1.getcarName());
+		System.out.println(car1.getType());
+		System.out.println(car1.getLevel());
+		System.out.println(car1.getColor());
+		System.out.println(car1.getInsurance());
+		System.out.println(car1.getPrice());
     }
 
 }
