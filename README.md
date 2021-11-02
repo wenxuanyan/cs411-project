@@ -27,8 +27,8 @@ link for VSCode: https://code.visualstudio.com/
 
 # Credit
 Contributors:
--Haowei Li 
--Yichen Wang
--Simo Wu
--Wenxuan Yan
--Runze Zhang
+- Haowei Li 
+- Yichen Wang
+- Simo Wu
+- Wenxuan Yan
+- Runze Zhang
