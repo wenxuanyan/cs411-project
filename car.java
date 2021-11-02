@@ -17,9 +17,7 @@ public class car{
 	public String getCustomerId() {
 		return customerid;
 	}
-	public final void setCustomerId(String customerid) throws IllegalArgumentException{
-		if(customerid==null || customerid.length() == 0)
-			throw new IllegalArgumentException("Customerid can not be NULL or length equals 0");
+	public final void setCustomerId(String customerid){
 		this.customerid = customerid;
 	}
 	
@@ -143,7 +141,6 @@ public class car{
 
 	/**
 	 * the constructor for add a new car
-	 * @param customerid
 	 * @param carid
 	 * @param carname
 	 * @param type
@@ -165,15 +162,5 @@ public class car{
 	/**
 	 * test code
 	 */
-	public void main() {
-        car car1 = new car("001","Mercedes","S550","Luxury","Black","Liberty","$1000");
-		System.out.println(car1.getCarId());
-		System.out.println(car1.getCarName());
-		System.out.println(car1.getType());
-		System.out.println(car1.getLevel());
-		System.out.println(car1.getColor());
-		System.out.println(car1.getInsurance());
-		System.out.println(car1.getPrice());
-    }
 
 }
