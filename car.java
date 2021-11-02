@@ -152,8 +152,7 @@ public class car{
 	 * @param insurance
 	 * @param price
 	 */
-	public car(String customerid, String carid, String carname, String type, String level, String color, String insurance, String price) {
-		setCustomerId(customerid);
+	public car(String carid, String carname, String type, String level, String color, String insurance, String price) {
 		setCarId(carid);
 		setCarName(carname);
 		setType(type);
