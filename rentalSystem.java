@@ -2,6 +2,7 @@
 public class rentalSystem {
 	private customer[] customerList;
 	private car[] carList;
+	private Object[] rentalBook;
 	
 	/**
 	 * Constructor, takes no input and creats a carList abd a customerList
@@ -9,6 +10,7 @@ public class rentalSystem {
 	rentalSystem(){
 		customerList = new customer[10];
 		carList = new car[10];
+		rentalBook = new Object[10];
 	}
 	/**
 	 * 
@@ -152,4 +154,29 @@ public class rentalSystem {
 		}
 		return false;
 	}
+	/**
+	 * Input customer ID and the car name or the car ID to rent the car
+	 * If the car is rented, it will output rented
+	 * @param customerID
+	 * @param content
+	 */
+	public void rentACar(String customerID, String content) {
+		for(car c: carList) {
+			if(c==null) {
+				System.out.println(content + " is not in the car list");
+				break;
+				}
+			if(c.getCarId()==content||c.getCarName()==content) {
+				if(c.getCustomerId()==null) {
+					c.setCustomerId(customerID);
+					System.out.println(content + " is successfully rented");
+				}else {
+					System.out.println(content + " is already rented by someone");
+				}
+				break;
+			}
+		}
+		
+	}
+	
 }
