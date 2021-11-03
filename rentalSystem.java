@@ -254,24 +254,24 @@ public class rentalSystem {
 		for(int i=0;i<rentalBook.length;i++) {
 			System.out.print(i + ": ");
 			for (int j=0;j<rentalBook[i].length;j++) {
+				switch(j) {
+				case 0:
+					System.out.print("Customer Name: ");
+					break;
+				case 1:
+					System.out.print(", Customer ID: ");
+					break;
+				case 2:
+					System.out.print(", Car Name: ");
+					break;
+				case 3:
+					System.out.print(", Car ID: ");
+					break;
+				}
 				if(rentalBook[i][j]!=null) {
-					switch(j) {
-						case 0:
-							System.out.print("Customer Name: ");
-							break;
-						case 1:
-							System.out.print(", Customer ID: ");
-							break;
-						case 2:
-							System.out.print(", Car Name: ");
-							break;
-						case 3:
-							System.out.print(", Car ID: ");
-							break;
-					}
 					System.out.print(rentalBook[i][j]);
 				}
-				else System.out.print(" Empty_Slot ");
+				else System.out.print("Empty_Slot");
 			}
 			System.out.println();
 		}
