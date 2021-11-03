@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 public class customer {
 	private String name;
@@ -30,14 +31,16 @@ public class customer {
 		return id;
 	}
 	/**
-	 * This method sets the id for the customer
+	 * This method randomly generates 3 digits id and sets the id for the customer
 	 * @param id
 	 * @throws IllegalArgumentException
 	 */
-	public final void setId(String id) throws IllegalArgumentException{
-		if(id==null || id.length() == 0)
-			throw new IllegalArgumentException("id can not be NULL or length equals 0");
-		this.id = id;
+	public final void setId() throws IllegalArgumentException{
+		Random  rand = new Random();
+		int r1 = rand.nextInt(10);
+		int r2 = rand.nextInt(10);
+		int r3 = rand.nextInt(10);
+		this.id = "" +r1+r2+r3;
 	}
 	/**
 	 * This method returns a phone number of the customer
@@ -86,9 +89,9 @@ public class customer {
 	 * @param phoneNumber
 	 * @param paymentInfo
 	 */
-	public customer(String name, String id, String phoneNumber, String[] paymentInfo) {
+	public customer(String name, String phoneNumber, String[] paymentInfo) {
 		setName(name);
-		setId(id);
+		setId();
 		setPhoneNumber(phoneNumber);
 		setPaymentInfo(paymentInfo);
 	}
@@ -98,7 +101,7 @@ public class customer {
 	public void main() {
 		
 		paymentInfo = new String[]{"BoA","12345","checking"};
-		customer customer1 = new customer("Haowei","123","10800", paymentInfo);
+		customer customer1 = new customer("Haowei","10800", paymentInfo);
 		System.out.println(customer1.getName());
 		System.out.println(customer1.getId());
 		System.out.println(customer1.getPhoneNumber());
