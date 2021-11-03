@@ -22,7 +22,9 @@ Our code requires customer computer has a software which can operate java file. 
 2. Unzip the files which customer will see "Car Rental Company" folder
 3. Use Eclipse or VSCode to click on "FIle" then "Open File" to open the folder 
 4. Find the folder called "src" and open it which contains three java files
-5. Open each files and run the test code
+5. Open each files on your console
+6. Then find the file Call "TestingCase"
+7. Input the desire variables in the file and run the code
 
 
 # Credit
