@@ -95,16 +95,4 @@ public class customer {
 		setPhoneNumber(phoneNumber);
 		setPaymentInfo(paymentInfo);
 	}
-	/**
-	 * This main function tests the class to see if it works
-	 */
-	public void main() {
-		
-		paymentInfo = new String[]{"BoA","12345","checking"};
-		customer customer1 = new customer("Haowei","10800", paymentInfo);
-		System.out.println(customer1.getName());
-		System.out.println(customer1.getId());
-		System.out.println(customer1.getPhoneNumber());
-		System.out.println(Arrays.toString(customer1.getPaymentInfo()));
-	}
 }
