@@ -10,7 +10,9 @@ Our software are construsted 100% by java and it has four classes
 1. Car.java
 2. Customer.java
 3. rentalSystem.java
-4. TestingCase.java
+4. revenueBook.java
+5. 
+6. TestingCase.java
 
 # Set Up
 # 1. Requirement and Installation
