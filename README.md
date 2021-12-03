@@ -14,7 +14,7 @@ Our software are construsted 100% by java and it has four classes
 
 # Set Up
 # 1. Requirement and Installation
-Our code requires customer computer has a software which can operate java file. In order to have best performance of our software, we recommend to have a computer at least operate Windows 7 or later version. The recommended sotware to implement our code are Eclipse or VScode. 
+Our code requires customer computer has a software which can operate java file. In order to have best performance of our software, we recommend to have a computer at least operate Windows 7 or later version. The recommended software to implement our code are Eclipse or VScode. 
 - link for Eclipse: https://www.eclipse.org/downloads/
 - link for VSCode: https://code.visualstudio.com/
 
