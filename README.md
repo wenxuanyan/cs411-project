@@ -22,7 +22,7 @@ Our code requires customer computer has a software which can operate java file. 
 
 # 2. Running the code
 1. First download the zip files from and all other files on the github.
-2. Unzip the files which customer will see "Car Rental Company" folder
+2. Unzip the files which customer will see "CarRentalSystem" folder
 3. Use Eclipse or VSCode to click on "FIle" then "Open File" to open the folder 
 4. Find the folder called "src" and open it which contains four java files
 5. Open each files on your console
