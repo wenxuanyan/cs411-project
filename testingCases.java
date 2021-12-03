@@ -1,8 +1,11 @@
+package carRentalSystem;
+
 public class tests{
 	  public static void main(String[] args) {
-	      String[] paymentInfo = new String[]{"BoA","12345","checking"};
-	      customer customer1 = new customer("Haowei","10800", paymentInfo);
-	      customer customer2 = new customer("David","10800", paymentInfo);
+	      String[] paymentInfo1 = new String[]{"BoA","22222","checking"};
+	      String[] paymentInfo2 = new String[]{"BoA","11111","checking"};
+	      customer customer1 = new customer("Haowei","8570001111", paymentInfo1);
+	      customer customer2 = new customer("David","8571112222", paymentInfo2);
 	      car car1 = new car("001","Mercedes","S550","Luxury","Black","Liberty","$1000");
 	      car car2 = new car("002","Honda","S550","Luxury","Black","Liberty","$1000");
 	      car car3 = new car("003","Toyota","S550","Luxury","Black","Liberty","$1000");
