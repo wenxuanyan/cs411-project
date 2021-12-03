@@ -3,13 +3,14 @@ As a software development company, we develop customized software for our custom
 
 # Objective
 1. Provide a well constructed and executable code
-2. Fulfill car renatal company's requirements
+2. Fulfill car rental company's requirements
 
 # Software
-Our software are construsted 100% by java and it has three classes
+Our software are construsted 100% by java and it has four classes
 1. Car.java
 2. Customer.java
 3. rentalSystem.java
+4. TestingCase.java
 
 # Set Up
 # 1. Requirement and Installation
@@ -21,7 +22,7 @@ Our code requires customer computer has a software which can operate java file. 
 1. First download the zip files from and all other files on the github.
 2. Unzip the files which customer will see "Car Rental Company" folder
 3. Use Eclipse or VSCode to click on "FIle" then "Open File" to open the folder 
-4. Find the folder called "src" and open it which contains three java files
+4. Find the folder called "src" and open it which contains four java files
 5. Open each files on your console
 6. Then find the file Call "TestingCase"
 7. Input the desire variables in the file and run the code
