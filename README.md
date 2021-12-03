@@ -6,12 +6,12 @@ As a software development company, we develop customized software for our custom
 2. Fulfill car rental company's requirements
 
 # Software
-Our software are construsted 100% by java and it has four classes
+Our software are construsted 100% by java and it has six classes
 1. Car.java
 2. Customer.java
 3. rentalSystem.java
-4. revenueBook.java
-5. 
+4. revenueSystem.java
+5. orderSystem.java
 6. TestingCase.java
 
 # Set Up
