@@ -148,14 +148,14 @@ public class rentalSystem {
 		if(content == null || content.length()==0) {
 			throw new IllegalArgumentException("delCar input cannot be null or have a length of 0");
 		}
-		for(car c:carList) {
-			if(c!=null) {
-				if(c.getCarId()==content) {
-					c = null;
+		for(int i=0;i<carList.length;i++) {
+			if(carList[i]!=null) {
+				if(carList[i].getCarId()==content) {
+					carList[i] = null;
 					return true;
 				}
-				if(c.getCarName()==content) {
-					c = null;
+				if(carList[i].getCarName()==content) {
+					carList[i] = null;
 					return true;
 				}
 			}
@@ -172,18 +172,18 @@ public class rentalSystem {
 		if(content == null || content.length()==0) {
 			throw new IllegalArgumentException("delCar input cannot be null or have a length of 0");
 		}
-		for(customer c:customerList) {
-			if(c!=null) {
-				if(c.getName()==content) {
-					c = null;
+		for(int i=0;i<customerList.length;i++) {
+			if(customerList[i]!=null) {
+				if(customerList[i].getName()==content) {
+					customerList[i] = null;
 					return true;
 				}
-				if(c.getId()==content) {
-					c = null;
+				if(customerList[i].getId()==content) {
+					customerList[i] = null;
 					return true;
 				}
-				if(c.getPhoneNumber()==content) {
-					c = null;
+				if(customerList[i].getPhoneNumber()==content) {
+					customerList[i] = null;
 					return true;
 				}
 			}
